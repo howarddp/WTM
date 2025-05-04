@@ -23,7 +23,7 @@
     "react": "^16.14.0",
     "react-contexify": "^4.1.1",
     "react-dom": "^16.14.0",
-    "react-intl": "~4.7.6",
+    "react-intl": "3.12.1",
     "react-resizable": "^1.11.0",
     "react-router-config": "^5.1.1",
     "react-router-dom": "~5.1.2",
@@ -32,10 +32,13 @@
     "viser-react": "^2.4.8"
   },
   "resolutions": {
-    "intl-messageformat-parser": "~5.4.2"
+    "intl-messageformat-parser": "3.6.4",
+    "intl-messageformat": "7.8.4",
+    "@formatjs/intl-utils": "2.3.0",
+    "@types/babel__traverse": "7.11.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-app-rewired start",
     "start:api": "cd .. && dotnet run --launch-profile ApiOnly",
     "build": "react-app-rewired build --analyze",
     "test": "react-app-rewired test",
@@ -60,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "@types/babel__traverse": "^7.11.1",
     "@types/jest": "24.0.19",
     "@types/lodash": "4.14.144",
     "@types/node": "12.11.2",
@@ -67,6 +71,7 @@
     "@types/react-dom": "16.9.2",
     "babel-plugin-import": "1.13.0",
     "classnames": "2.2.6",
+    "cross-env": "^7.0.3",
     "customize-cra": "0.9.1",
     "less": "3.11.1",
     "less-loader": "5.0.0",

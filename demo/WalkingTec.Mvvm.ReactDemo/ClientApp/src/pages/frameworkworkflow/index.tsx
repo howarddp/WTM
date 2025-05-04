@@ -7,7 +7,7 @@ export default class App extends React.Component<any, any> {
   render() {
     return (
         <div key="frameworkworkflow">
-            <iframe src={"http://localhost:5555/_workflow/inner?access_token=" + window.localStorage.getItem('__token')} frameborder="0" style="width:100%;height:100%" />
+            <iframe src={"http://localhost:5555/_workflow/inner?access_token=" + window.localStorage.getItem('__token')} frameBorder="0" style={{ width: '100%', height: '100%' }} />
       </div>
     );
   }
